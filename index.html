@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load the google fonts api and the style.css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+    <!-- Load the relevant render processes for the hardware controls -->
+    <script src="./ledControl.js"></script>
+    <script src="./buzzerControl.js"></script>
+    <script src="./buttonControl.js"></script>
+    <script src="./touchData.js"></script>
+    <!-- Load the smoothiecharts library (http://smoothiecharts.org) -->
+    <script type="text/javascript" src="./smoothie.js"></script>
+    <script>
+      // Load ipcRenderer module
+      const { ipcRenderer } = require('electron');
+      // Function to close the app on button press
+      function closeButton()
+      {
+        ipcRenderer.send("close-app")
+      }
+    </script>
+  </head>
+
+<body>
+  <div class="header">
+    <div>
+      <!-- Application close button -->
+      <button class="closeBtn" onclick="closeButton()">X</button>
+    </div>
+    <!-- Application header title -->
+    <h1>reTerminal Hardware Control and Access</h1>
+  </div>
+
+  <br> <!-- Add empty line -->
+
+  <!-- load the grid layout module with parent element -->
+  <div class="grid-container">
+    <!-- child element of grid-container for light sensor -->
+    <div class="lightBlock">
+      <h1>Light Sensor</h1>
+      <canvas id="lightChart" width="400" height="200"></canvas>
+      <!-- load the renderer process for light sensor graph -->
+      <script src="./lightData.js"></script>
+    </div>
+
+    <!-- child element of grid-container for buttons -->
+    <div class="buttonsBlock">
+      <h1>Buttons</h1>
+      <br>
+      <br>
+      <br>
+      <!-- child element of buttonsBlock for buttons -->
+      <div class="buttonsArrange">
+        <!-- Drawing the buttons -->
+        <p id="F1Btn"></p>
+        <p id="F2Btn"></p>
+        <p id="F3Btn"></p>
+        <p id="OBtn"></p>
+        <!-- Button labels -->
+        <h3 class="F1Text">F1</h3>
+        <h3 class="F2Text">F2</h3>
+        <h3 class="F3Text">F3</h3>
+        <h3 class="OText">O</h3>
+      </div>
+    </div>
+
+    <!-- child element of grid-container for LEDs -->
+    <div class="ledsBlock">
+      <h1>LEDs</h1>
+      <br>
+      <br>
+      <!-- child element of ledsBlock for LEDs -->
+      <div class="ledsArrange">
+        <!-- draw the buttons -->
+        <button class="ledButton staGreenON" onclick="staGreenOn()">staGreenOn</button>
+        <br>
+        <button class="ledButton staGreenOFF" onclick="staGreenOff()">staGreenOff</button>
+        <br>
+        <button class="ledButton staRedON" onclick="staRedOn()">staRedOn</button>
+        <br>
+        <button class="ledButton staRedOFF" onclick="staRedOff()">staRedOff</button>
+        <br>
+        <button class="ledButton usrGreenON" onclick="usrGreenOn()">usrGreenOn</button>
+        <br>
+        <button class="ledButton usrGreenOFF" onclick="usrGreenOff()">usrGreenOff</button>
+      </div>
+    </div>
+
+    <!-- child element of grid-container for accelerometer -->
+    <div class="accelBlock">
+      <h1>3-Axis Accelerometer</h1>
+      <canvas id="accelChart" width="400" height="200"></canvas>
+      <!-- load the renderer process for accelerometer graph -->
+      <script src="./accelData.js"></script>
+    </div>
+
+    <!-- child element of grid-container for touch panel -->
+    <div class="tpBlock">
+      <h1>Touch Panel</h1>
+      <p id="circle"></p>
+    </div>
+
+    <!-- child element of grid-container for buzzer -->
+    <div class="buzzerBlock">
+      <h1>Buzzer</h1>
+      <br>
+      <br>
+       <!-- child element of buzzerBlock for buzzer -->
+      <div class="buzzerArrange">
+        <button class="buzzerON" onclick="buzzerOn()">ON</button>
+        <br>
+        <button class="buzzerOFF" onclick="buzzerOff()">OFF</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

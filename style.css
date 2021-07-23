@@ -1,0 +1,290 @@
+/*Styling for application header*/
+.header {
+  background-color: #189A55;
+  text-align: center;
+  padding: 8px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for grid layout*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/*Styling for light sensor block*/
+.lightBlock {
+  grid-column: 1;
+  grid-row: 1;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  height: 275px;
+  font-size: 10px;
+  font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for buttons block*/
+.buttonsBlock {
+  grid-column: 2;
+  grid-row: 1;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  font-size: 10px;
+  font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for arranging the buttons*/
+.buttonsArrange {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  /* grid-auto-rows: minmax(5px, auto); */
+}
+
+/*Styling for F1 button*/
+#F1Btn {
+  grid-column: 1;
+  grid-row: 1;
+  height: 50px;
+  width: 95px;
+  background-color: #dbd8d8;
+  border-radius: 15%;
+}
+
+/*Styling for F2 button*/
+#F2Btn {
+  grid-column: 2;
+  grid-row: 1;
+  height: 50px;
+  width: 95px;
+  background-color: #dbd8d8;
+  border-radius: 15%;
+}
+
+/*Styling for F3 button*/
+#F3Btn {
+  grid-column: 3;
+  grid-row: 1;
+  height: 50px;
+  width: 95px;
+  background-color: #dbd8d8;
+  border-radius: 15%;
+}
+
+/*Styling for O button*/
+#OBtn {
+  grid-column: 4;
+  grid-row: 1;
+  height: 50px;
+  width: 95px;
+  background-color: #6cca84;
+  border-radius: 15%;
+}
+
+/*Styling for F1 text*/
+.F1Text {
+text-align: center;
+grid-column: 1;
+grid-row: 2;
+padding: 2px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for F2 text*/
+.F2Text {
+text-align: center;
+grid-column: 2;
+grid-row: 2;
+padding: 2px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for F3 text*/
+.F3Text {
+text-align: center;
+grid-column: 3;
+grid-row: 2;
+padding: 2px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for O text*/
+.OText {
+text-align: center;
+grid-column: 4;
+grid-row: 2;
+padding: 2px;
+font-size: 20px;
+color: rgb(0, 0, 0);
+font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for LEDs block*/
+.ledsBlock {
+  grid-column: 3;
+  grid-row: 1;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  font-size: 10px;
+  font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for arranging LEDs*/
+.ledsArrange {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+/*Styling for common LED button class*/
+.ledButton {
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Roboto", "Courier New", monospace;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+/*Styling for staGreenON button*/
+.staGreenON {
+  grid-column: 1;
+  grid-row: 1; 
+  background-color:rgb(76, 175, 80);
+}
+
+/*Styling for staGreenOFF button*/
+.staGreenOFF {
+  grid-column: 2;
+  grid-row: 1;
+  background-color:rgb(207, 24, 24);
+}
+
+/*Styling for staRedON button*/
+.staRedON {
+  grid-column: 1;
+  grid-row: 2;
+  background-color:rgb(76, 175, 80);
+}
+
+/*Styling for staRedOFF button*/
+.staRedOFF {
+  grid-column: 2;
+  grid-row: 2;
+  background-color:rgb(207, 24, 24);
+}
+
+/*Styling for usrGreenON button*/
+.usrGreenON {
+  grid-column: 1;
+  grid-row: 3;
+  background-color:rgb(76, 175, 80);
+}
+
+/*Styling for usrGreenOFF button*/
+.usrGreenOFF {
+  grid-column: 2;
+  grid-row: 3;
+  background-color:rgb(207, 24, 24);
+}
+
+/*Styling for accelerometer block*/
+.accelBlock {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  height: 275px;
+  font-size: 10px;
+  font-family: "Roboto", "Courier New", monospace;
+  
+}
+
+/*Styling for touch panel block*/
+.tpBlock {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  font-size: 10px;
+  font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for touch panel circle point*/
+#circle {
+  height: 40px;
+  width: 40px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: inline-block;
+  position: sticky;
+  }
+
+/*Styling for buzzer block*/
+.buzzerBlock {
+  grid-column: 3;
+  grid-row: 2;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+  font-size: 10px;
+  font-family: "Roboto", "Courier New", monospace;
+}
+
+/*Styling for arranging the buzzer buttons*/
+.buzzerArrange {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  /* grid-auto-rows: minmax(5px, auto); */
+}
+
+/*Styling for arranging the buzzer ON*/
+.buzzerON {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 10px;
+  font-size: 30px;
+  font-family: "Roboto", "Courier New", monospace;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color:rgb(76, 175, 80);
+  border-radius: 10px;
+}
+
+/*Styling for arranging the buzzer OFF*/
+.buzzerOFF {
+  grid-column: 1;
+  grid-row: 3;
+  padding: 10px;
+  font-size: 30px;
+  font-family: "Roboto", "Courier New", monospace;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color:rgb(207, 24, 24);
+  border-radius: 10px;
+}
+
+/* Styling for Close button */
+.closeBtn {
+  padding: 8px 25px;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background-color:rgb(179, 44, 44);
+  border: none;
+  width: 6%;
+  margin:auto;
+  display:grid;
+  float: right;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "reterminal-hardware-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.6"
+  },
+  "dependencies": {
+    "npm-reterminal": "^1.1.0"
+  }
+}
